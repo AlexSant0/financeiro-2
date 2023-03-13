@@ -12,18 +12,20 @@ class Dashboard extends BaseController
     public function index()
     {
         $data = $this->payment->getAll();
+        
         foreach($data as $key => $val){
             $entrada[] = [
                 'value' => $val->value,
-                'method' => $val->method,
+                'method' => methodStatus($val->method),
                 'description' => $val->description,
-                'created_at' => $val->created_at
+                'created_at' => date('d-m-Y', strtotime($val->created_at))
             ];
         }
     
         $data = array(
             'entradas' => $entrada
         );
+        
         echo view('admin/layout/template-header');
         echo view('admin/dashboard/index', $data);
     }

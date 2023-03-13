@@ -156,10 +156,11 @@
                                            
                                         <? foreach($entradas as $entrada => $val): ?>
                                         <tr>
+                                            
                                             <td>R$ <?= $val['value'] ?></td>
-                                            <td> <?= $val['method'] ?></td>
-                                            <td> <?= $val['description'] ?></td>
-                                            <td> <?= $val['created_at'] ?></td>
+                                            <td><?= $val['method'] ?></td>
+                                            <td><?= $val['description'] ?></td>
+                                            <td><?= $val['created_at'] ?></td>
                                         </tr>
                                         <? endforeach; ?>
                                     </tbody>
