@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost/financeiro/public/';
+    public string $baseURL = 'http://localhost/financeiro-2/public/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
