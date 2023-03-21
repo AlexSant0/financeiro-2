@@ -23,10 +23,19 @@ class Dashboard extends BaseController
         }
     
         $data = array(
-            'entradas' => $entrada
+            'entradas' => $entrada,
+            'menu' => view('admin/layout/menu')
         );
         
         echo view('admin/layout/template-header');
         echo view('admin/dashboard/index', $data);
+        echo view('admin/layout/template-footer');
     }
+
+    public function entrada(){
+        echo view('admin/layout/template-header');
+        echo view('admin/dashboard/entradas');
+    }
+
+    
 }
