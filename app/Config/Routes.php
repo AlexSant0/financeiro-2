@@ -33,10 +33,13 @@ $routes->get('/', 'Home::index');
 $routes->group('admin', function($routes){
 
     $routes->get('/', 'Admin\Dashboard::index');
-    $routes->get('entrada', 'Admin\Entrada::index');
+    $routes->get('entrada', 'Admin\Payment::index');
+    $routes->get('saida', 'Admin\spent::index');
     $routes->get('login', 'Admin\Login::index');
+    $routes->get('agenda', 'Admin\Agenda::index');
     
-    $routes->post('entrada', 'Admin\Entrada::add');
+    $routes->post('entrada', 'Admin\Payment::add');
+    $routes->post('saida', 'Admin\Spent::add');
 });
 
 /*

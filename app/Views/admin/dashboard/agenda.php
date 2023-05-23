@@ -10,8 +10,8 @@
             <div class="container">
                 <div class="row mt-3">
                     <div class="col-10 m-auto">
-                        <h1>Entrada</h1>
-                        <p>Adicionar nova entrada</p>
+                        <h1>Agendamentos</h1>
+                        <p>Agenda uma nova cliente</p>
                     </div>
                 </div>
                 <div class="row mt-3">
@@ -19,21 +19,17 @@
                         <form class="new-transaction mb-5 pb-5" action="<?= base_url('admin/entrada') ?>" method="post">
                             
                             <div class="mb-2 col-6">
-                                <label class="form-label">Serviço</label>
-                                <select name="service" class="form-control">
-                                    <option value="1">Volume Russo</option>
-                                    <option value="2">Fio a fio</option>
-                                    <option value="3">Sobrancelha</option>
-                                    <option value="4">Brasileiro</option>
-                                </select>
+                                <label class="form-label">Nome da cliente</label>
+                                <input type="text" name="set[client_name]" placeholder="Nome da cliente" class="form-control date">
                             </div>
-                            <div class="mb-2 col-6">
+                            <div class="mb-2 col-6 select-method">
                                 <label class="form-label">Metodo de pagamento</label>
-                                <select name="method" class="form-control">
-                                    <option value="1">DINHEIRO</option>
-                                    <option value="2">PIX</option>
-                                    <option value="3">CARTÃO</option>
-                                </select>
+                                <input type="radio" id="dinheiro" name="method" value="1">
+                                <label for="dinheiro">Dinheiro</label><br>
+                                <input type="radio" id="pix" name="method" value="2">
+                                <label for="pix">Pix</label><br>
+                                <input type="radio" id="cartao" name="method" value="3">
+                                <label for="cartao">Cartão</label>
                             </div>
                             <div class="col-6">
                                 <div class="row">

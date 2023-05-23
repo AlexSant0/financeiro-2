@@ -1,7 +1,7 @@
 
 
             <?= $menu ?>
-            <div id="layoutSidenav_content">
+            <div class="bg-secondary bg-opacity-25" id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
@@ -13,7 +13,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <h3 class="card-body">Entradas</h3>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <h2>R$ 800,00</h2>
+                                        <h2>R$ <?= $soma ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -21,7 +21,7 @@
                                 <div class="card bg-danger text-white mb-4">
                                     <h3 class="card-body">Saidas<h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <h2>R$ 500,00</h2>
+                                        <h2>R$ <?= $sub ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 <div class="card bg-success text-white mb-4">
                                     <h3 class="card-body">Saldo</h3>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <h2>R$ 300,00</h2>
+                                        <h2>R$ <?= $saldo ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -59,18 +59,11 @@
                                         <tr>
                                             <th>Valor</th>
                                             <th>Método</th>
+                                            <th>Serviço</th>
                                             <th>Descrição</th>
                                             <th>Data</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </tfoot>
                                     <!-- aqui vai ser inserida as entradas -->
                                     <tbody>
                                            
@@ -79,6 +72,7 @@
                                             
                                             <td>R$ <?= $val['value'] ?></td>
                                             <td><?= $val['method'] ?></td>
+                                            <td><?= $val['service'] ?></td>
                                             <td><?= $val['description'] ?></td>
                                             <td><?= $val['created_at'] ?></td>
                                         </tr>

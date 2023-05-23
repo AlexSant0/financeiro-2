@@ -4,27 +4,25 @@
         resize: none;
     }   
 </style>
-<div class="bg-secondary bg-opacity-25" id="layoutSidenav_content">
+<div id="layoutSidenav_content">
     <main>
         <div class="container-fluid">
             <div class="container">
                 <div class="row mt-3">
                     <div class="col-10 m-auto">
-                        <h1>Entrada</h1>
-                        <p>Adicionar nova entrada</p>
+                        <h1>Saida</h1>
+                        <p>gastando dinheiro de novo '-'</p>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-10 m-auto">
-                        <form class="new-transaction mb-5 pb-5" action="<?= base_url('admin/entrada') ?>" method="post">
+                        <form class="new-transaction" action="<?= base_url('admin/saida') ?>" method="post">
                             
                             <div class="mb-2 col-6">
-                                <label class="form-label">Serviço</label>
-                                <select name="service" class="form-control">
-                                    <option value="1">Volume Russo</option>
-                                    <option value="2">Fio a fio</option>
-                                    <option value="3">Sobrancelha</option>
-                                    <option value="4">Brasileiro</option>
+                                <label class="form-label">Tipo de saida</label>
+                                <select name="type" class="form-control">
+                                    <option value="1">Gasto pessoal</option>
+                                    <option value="2">Gasto empresa</option>
                                 </select>
                             </div>
                             <div class="mb-2 col-6">
@@ -35,19 +33,14 @@
                                     <option value="3">CARTÃO</option>
                                 </select>
                             </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="mb-2 col-6">
-                                        <label class="form-label">valor</label>
-                                        <input type="text" class="form-control" name="value" placeholder="R$" required>
-                                    </div>
-                                    <div class="mb-2 col-6">
-                                        <label class="form-label">Data</label>
-                                        <input type="date" class="form-control" name="created_at" required>
-                                    </div>
-                                </div>
+                            <div class="mb-2 col-6">
+                                <label class="form-label">valor</label>
+                                <input type="text" class="form-control" name="value" required>
                             </div>
-                            
+                            <div class="mb-2 col-6">
+                                <label class="form-label">Data</label>
+                                <input type="date" class="form-control" name="created_at" required>
+                            </div>
                             <div class="mb-5 col-6">
                                 <label class="form-label">Descrição(opcional)</label>
                                 <textarea class="form-control" name="description" cols="30" rows="4"></textarea>

@@ -9,6 +9,8 @@
         <!-- jquery -->
         <script src="<?= base_url('assets/jquery/jquery-3.6.4.js'); ?>"></script>
         <script src="<?= base_url('assets/jquery/jquery-3.6.4.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/jquery/jquery.mask.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/jquery/jquery.mask.js'); ?>"></script>
         <script src="<?= base_url('asset-admin/js/custom.js'); ?>"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>

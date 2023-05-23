@@ -5,9 +5,9 @@ namespace App\Models;
 use CodeIgniter\Model;
 use Config\Database;
 
-class PaymentModel extends Model
+class SpentModel extends Model
 {
-    protected $table = 'ganhos';
+    protected $table = 'saidas';
     protected $primaryKey = 'id';
 
     protected $builder;
@@ -43,7 +43,7 @@ class PaymentModel extends Model
 
     }
 
-    public function  getAll(){
+    public function getAll(){
         $this->connect();
 
         $this->builder->select('*');
